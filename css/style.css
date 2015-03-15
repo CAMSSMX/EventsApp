@@ -1,0 +1,141 @@
+* { box-sizing: border-box }
+body {
+	color: white;
+	font-family: Arial, sans-serif;
+}
+header {
+	background: #353d40;
+	margin: 0;
+}
+#logo,#title {
+	display: inline-block;
+}
+#logo {
+	width: 200px;
+	text-align: center;
+	font-size: 4em;
+	height: 150px;
+	/* border: 1px solid yellow; */
+	vertical-align: bottom;
+}
+#title {
+	font-size: 2em;
+	font-weight: bold;
+	vertical-align: middle;
+	
+}
+#menu {
+	background: #008abf;
+	width: 200px;
+	height: 450px;
+	vertical-align: top;
+}
+#commonMenu{
+	vertical-align: top;
+}
+#main_container section {
+	display: inline-block;
+}
+#loginSection{
+	display: inline;
+}
+#contentPage div {
+	color: gray;
+	border: 0px solid red;
+	width: 100%;
+	/*background-color: #EFEFEF;*/
+}
+#home, #newEvent, #myEvents, #eventDetail, #attendees {
+	display: none;
+}
+#contentPage {
+	/* width: 100%; */
+	background-color: white;
+}
+#commonMenu ul li {
+	list-style: none;
+	margin: 2px 0;
+}
+#commonMenu, #adminMenu {
+	display: none;
+}
+#commonMenu ul li a {
+	text-decoration: none;
+	color: white;
+}
+th {
+	border: 3px solid lightgray;
+	text-align: center;
+	padding: 3px 5px;
+}
+td {
+	border: 1px solid lightgray;
+	text-align: center;
+	padding: 3px 5px;
+}
+#newEvent table th {
+	border: 0px solid lightgray;
+	text-align: left;
+	padding: 3px 5px;
+}
+#newEvent table td {
+	border: 0px solid lightgray;
+	text-align: left;
+	padding: 3px 5px;
+}
+#loginSection span {
+	display: none;
+	border:2px solid red;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+#welcome {
+	display: none;
+}
+
+#eventDescription {
+	width: 350px;
+}
+#loading {
+	background-color: white;
+	display: none;
+	padding: 10px;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+#adminActions {
+	display: inline-block;
+}
+
+#adminActions {
+	margin: .5em 1em;
+}
+
+.adminButtons {
+	display: none;
+}
+
+#eventAttendes {
+	margin-bottom: 2em;
+}
+
+#about {
+	/*position: absolute;*/
+	/*left: 40%;*/
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 1em;
+	background-color: #0F161A;
+	text-align: center;
+	transition: all 800ms ease;
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>.: EventesApp - CAMSS 2015 :.</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<div id="logo">w3</div>
+		<div id="title">
+			<h1>
+				EventsApp - CAMSS 2015
+			</h1>
+		</div>
+	</header>
+	<section id="main_container">
+		<section id="menu">
+			<nav id="commonMenu">
+				<ul>
+					<li><a href="javascript:showSection('home')">Home</a></li>
+					<li><a href="javascript:showSection('myEvents')">Mis Eventos</a></li>
+					<li><a href="javascript:showSection('newEvent')">Crear Evento</a></li>
+					<li><a href="javascript:exitApp()">Salir</a></li>
+				</ul>
+			</nav>
+			<nav id="adminMenu">
+				<ul>
+					<li><a href="javascript:showSection('adminEvents')">Administrar</a></li>
+					<li><a href="javascript:showSection('repors')">Reportes</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section id="contentPage">
+			<div id="welcome">Hola <span></span>, bienvenid@.</div>
+			<div id="loginSection">
+				<h2>Login</h2>
+				<label for="username">Usuario: </label><br/><input type="text" id="username" placeholder="Ingrese Usuario"/><br/>
+				<label for="password">Contraseña: </label><br/><input type="password" id="password" placeholder="Ingresa Contraseña"/><br/>
+				<input type="submit" name="login" id="login" value="Entrar"><br/><br/>
+				<span></span>
+			</div>
+			<div id="home">
+				<h2>Inicio - Próximos Eventos</h2>
+				<div id="nextEvents">
+					<div id="tableResults">
+						<table>
+							<tr>
+								<th>#</th>
+								<th>Nombre</th>
+								<th>Descripción</th>
+								<th>Fecha Evento</th>
+								<th>Tipo Evento</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:showSection('eventDetail')">1234001</a></td>
+								<td>Evento Prueba 1</td>
+								<td>Descripción Evento de Prueba 1</td>
+								<td>30-Mar-2015</td>
+								<td>Abierto/Público</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:showSection('eventDetail')">1234033</a></td>
+								<td>Evento Prueba 1</td>
+								<td>Descripción Evento de Prueba 2</td>
+								<td>10-Abr-2015</td>
+								<td>Executive</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:showSection('eventDetail')">1255001</a></td>
+								<td>Evento Prueba 3</td>
+								<td>Descripción Evento de Prueba 3</td>
+								<td>20-Jun-2015</td>
+								<td>Managers</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:showSection('eventDetail')">2234078</a></td>
+								<td>Evento Prueba 4</td>
+								<td>Descripción Evento de Prueba 4</td>
+								<td>15-Ago-2015</td>
+								<td>Empleados</td>
+							</tr>
+				
+						</table>
+
+					</div>
+
+				</div>
+			</div>
+			<div id="newEvent">
+				<h2>Crear Evento</h2>
+				<div id="createForm">
+					Por favor llene el formulario y presione Crear Evento
+					<br/><br/>
+					<table>
+						<tr>
+							<th><label for="eventName">Nombre Evento:</label></th>
+							<th colspan="2"><label for="eventDescription">Descripción del Evento:</label></th>
+						</tr>
+						<tr>
+							<td><input type="text" id="eventName" placeholder="Nombre de Evento"/></td>
+							<td colspan="2"><input type="text" id="eventDescription" placeholder="Descripción del Evento"/></td>
+						</tr>
+						<tr>
+							<td colspan="3"></td>
+						</tr>
+						<tr>
+							<th><label for="dateEvent">Fecha Evento: </label></th>
+							<th><label for="typeEvent">Tipo de Evento:</label></th>
+							<th><label for="placeEvent">Lugar del Evento:</label></th>
+						</tr>
+						<tr>
+							<td><input type="date" id="dateEvent"/></td>
+							<td>
+								<select id="typeEvent">
+									<option value="zet" selected="true">Seleccione el Tipo...</option>
+									<option value="exe">Executive</option>
+									<option value="man">Managers</option>
+									<option value="reg">Empleados Regulares</option>
+									<option value="rac">Abierto/Interno</option>
+									<option value="ope">Abierto/Público</option>
+								</select>
+							</td>
+							<td>
+								<select id="placeEvent">
+									<option value="zep" selected="true">Seleccione el Lugar...</option>
+									<option value="exe">Abierto</option>
+									<option value="man">Sala de Juntas</option>
+									<option value="reg">Auditorio</option>
+									<option value="rac">Deportivo</option>
+									<option value="ope">Salon de Eventos</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="3"><label for="completeDesription">Descripción detallada del Evento:</label></th>
+						</tr>
+						<tr>
+							<td colspan="3"><textarea rows="11" cols="80" id="comments" placeholder="Escribe la descripción completa del evento."></textarea></td>
+						</tr>
+					</table>
+					<input type="submit" name="submit" id="submit" value="Crear Evento">
+				</div>
+			</div>
+			<div id="myEvents">
+				<h2>Mis Eventos</h2>
+				<div id="nextEvents">
+					<div id="tableResults">
+						<table>
+							<tr>
+								<th>#</th>
+								<th>Nombre</th>
+								<th>Descripción</th>
+								<th>Fecha Evento</th>
+								<th>Tipo Evento</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:showSection('eventDetail')">1234033</a></td>
+								<td>Evento Prueba 1</td>
+								<td>Descripción Evento de Prueba 2</td>
+								<td>10-Abr-2015</td>
+								<td>Executive</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:showSection('eventDetail')">1255001</a></td>
+								<td>Evento Prueba 3</td>
+								<td>Descripción Evento de Prueba 3</td>
+								<td>20-Jun-2015</td>
+								<td>Managers</td>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+			</div>
+			<div id="eventDetail">
+				<h2>Detalle Evento</h2>
+				<div id="modifyForm">
+					Detalle del Evento, selecciona la opción deseada:
+					<br/><br/>
+					<table>
+						<tr>
+							<th><label for="idEvent"># Evento:</label></th>
+							<th><label for="eventRole">Role:</label></th>
+						</tr>
+						<tr>
+							<td>1234033</td>
+							<td>Creador Autor / Asistente</td>
+						</tr>
+						<tr>
+							<th><label for="eventName">Nombre Evento:</label></th>
+							<th colspan="2"><label for="eventDescription">Descripción del Evento:</label></th>
+						</tr>
+						<tr>
+							<td><input type="text" id="eventName" placeholder="Nombre de Evento" value="Evento Prueba 2" /></td>
+							<td colspan="2"><input type="text" id="eventDescription" placeholder="Descripción del Evento" value="Descripción Evento de Prueba 2"/></td>
+						</tr>
+						<tr>
+							<td colspan="3"></td>
+						</tr>
+						<tr>
+							<th><label for="dateEvent">Fecha Evento: </label></th>
+							<th><label for="typeEvent">Tipo de Evento:</label></th>
+							<th><label for="placeEvent">Lugar del Evento:</label></th>
+						</tr>
+						<tr>
+							<td><input type="date" id="dateEvent"/></td>
+							<td>
+								<select id="typeEvent">
+									<option value="zet">Seleccione el Tipo...</option>
+									<option value="exe" selected="true">Executive</option>
+									<option value="man">Managers</option>
+									<option value="reg">Empleados Regulares</option>
+									<option value="rac">Abierto/Interno</option>
+									<option value="ope">Abierto/Público</option>
+								</select>
+							</td>
+							<td>
+								<select id="placeEvent">
+									<option value="zep">Seleccione el Lugar...</option>
+									<option value="exe">Abierto</option>
+									<option value="man" selected="true">Sala de Juntas</option>
+									<option value="reg">Auditorio</option>
+									<option value="rac">Deportivo</option>
+									<option value="ope">Salon de Eventos</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="3"><label for="completeDesription">Descripción detallada del Evento:</label></th>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<textarea rows="8" cols="80" id="comments" placeholder="Escribe la descripción completa del evento."></textarea>
+							</td>
+						</tr>
+					</table>
+					<div id="adminActions">
+						<input type="submit" name="attend" id="attend" value="Ver Asistentes">
+						<input type="submit" name="update" id="update" value="Actualizar Evento" class="adminButtons">
+						<input type="submit" name="cancel" id="cancel" value="Cancelar Evento" class="adminButtons">
+					</div>
+				</div>
+			</div>
+			<div id="attendees">
+				<h2>Asistentes</h2>
+				<div id="eventAttendes">
+					<div id="eventAttendesResults">
+						<table>
+							<tr>
+								<th>Nombre</th>
+								<th>Correo</th>
+								<th>Localidad</th>
+								<th>Inscrito</th>
+								<th>Confirmado</th>
+							</tr>
+							<tr>
+								<td>Jorge Salas Perez</td>
+								<td>jorgesp@mx1.ibm.com</td>
+								<td>GDL</td>
+								<td>SI</td>
+								<td>NO</td>
+							</tr>
+							<tr>
+								<td>Jorge Salas Perez</td>
+								<td>jorgesp@mx1.ibm.com</td>
+								<td>GDL</td>
+								<td>SI</td>
+								<td>SI</td>
+							</tr>
+							<tr>
+								<td>Jorge Salas Perez</td>
+								<td>jorgesp@mx1.ibm.com</td>
+								<td>MX LG</td>
+								<td>SI</td>
+								<td>NO</td>
+							</tr>
+							<tr>
+								<td>Jorge Salas Perez</td>
+								<td>jorgesp@mx1.ibm.com</td>
+								<td>MTY</td>
+								<td>SI</td>
+								<td>NO</td>
+							</tr>
+							<tr>
+								<td>Jorge Salas Perez</td>
+								<td>jorgesp@mx1.ibm.com</td>
+								<td>QRO</td>
+								<td>SI</td>
+								<td>NO</td>
+							</tr>
+							<tr>
+								<td>Jorge Salas Perez</td>
+								<td>jorgesp@mx1.ibm.com</td>
+								<td>MX SF</td>
+								<td>SI</td>
+								<td>NO</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>			
+			<div id="loading"><img src="loading.gif" alt=""></div>
+				<a href="#">
+			<div id="about">
+				About EnventsApp - CAMSS
+				<br/><br/>
+				GBS Mexico - GDC<br/>
+				Claudia Serafin Cano<br/>
+				Jimena Alcantara Olivares<br/>
+				Nallely Hernández Estrada<br/>
+				Susana Lopez Hernández<br/>
+				Silvia Yazmin Díaz Partida<br/>
+				Antonio Sánchez
+			</div>
+				</a>
+		</section>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="jquery.gcae.carga.js"></script>
+	<script src="loginService.js"></script>
+	<script src="src.js"></script>
+	<script src="testFunctions.js"></script>
+</body>
+</html>
